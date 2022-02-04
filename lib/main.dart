@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -15,10 +14,5 @@ void main() async {
     spirv: (await rootBundle.load('assets/shaders/simple.sprv')).buffer,
   );
 
-  // Turn it into a shader with given inputs (floatUniforms).
-  final shader = program.shader(
-    floatUniforms: Float32List.fromList(<double>[1]),
-  );
-
-  runApp(FlutterShaderTest(shader: shader));
+  runApp(FlutterShaderTest(fragmentProgram: program));
 }

@@ -1,5 +1,7 @@
 # Flutter Fragment Shader Test
 
+![shader demo](docs/assets/demo.gif)
+
 This reposistory was created to showcase shader support in Flutter. For more 
 information about my findings see the [Medium post](https://wolfenrain.medium.com/flutter-shaders-an-initial-look-d9eb98d3fd7a).
 
