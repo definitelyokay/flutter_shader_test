@@ -4,10 +4,13 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+// Adapted from https://www.shadertoy.com/view/Xd3BWr
+
 precision highp float;
 
 layout(location = 0) out vec4 fragColor;
 
+// Pass in our time, width, and height as uniforms.
 layout(location = 0) uniform float iTime;
 layout(location = 1) uniform float width;
 layout(location = 2) uniform float height;
@@ -18,8 +21,10 @@ layout(location = 2) uniform float height;
 
 void main() 
 {
+    // This is how you get the pixel's location.
     vec2 fragCoord = gl_FragCoord.xy;
 
+    // Mimic shadertoy's iResolution variable (sorta).
     vec2 iResolution = vec2(width, height);
 
     vec2 uv = fragCoord / iResolution;
